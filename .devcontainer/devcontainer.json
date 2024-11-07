@@ -1,0 +1,26 @@
+{
+    "name": "Portfolio Development",
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "lts"
+        },
+        "ghcr.io/devcontainers/features/go:1": {
+            "version": "latest"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "dsznajder.es7-react-js-snippets",
+                "golang.go",
+                "ms-vscode.vscode-typescript-next"
+            ]
+        }
+    },
+    "forwardPorts": [3000, 8080],
+    "postCreateCommand": "npm install",
+    "remoteUser": "codespace"
+}
