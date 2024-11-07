@@ -1,35 +1,30 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
-const Footer: React.FC = () => {
+const Home: React.FC = () => {
   return (
-    <footer className="bg-light py-4 mt-auto">
-      <Container>
-        <div className="d-flex flex-wrap justify-content-between align-items-center">
-          <div className="col-md-4 d-flex align-items-center">
-            <span className="text-muted">© {new Date().getFullYear()} Coding Corner</span>
+    <div className="fade-in">
+      <Row className="align-items-center">
+        <Col md={6} className="mb-4 mb-md-0">
+          <h1 className="display-4 fw-bold">Welcome to Coding Corner</h1>
+          <p className="lead">
+            A place where code meets creativity. Explore my projects, read my blog posts, 
+            and learn more about my journey in software development.
+          </p>
+        </Col>
+        <Col md={6}>
+          <div className="p-4 bg-light rounded">
+            <h3>Latest Updates</h3>
+            <ul className="list-unstyled">
+              <li className="mb-2">🚀 Working on exciting new projects</li>
+              <li className="mb-2">📚 Learning new technologies</li>
+              <li className="mb-2">✍️ Writing technical blog posts</li>
+            </ul>
           </div>
-          <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li className="ms-3">
-              <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className="text-muted">
-                GitHub
-              </a>
-            </li>
-            <li className="ms-3">
-              <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer" className="text-muted">
-                LinkedIn
-              </a>
-            </li>
-            <li className="ms-3">
-              <a href="mailto:your.email@example.com" className="text-muted">
-                Email
-              </a>
-            </li>
-          </ul>
-        </div>
-      </Container>
-    </footer>
+        </Col>
+      </Row>
+    </div>
   );
 };
 
-export default Footer;
+export default Home;
